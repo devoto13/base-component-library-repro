@@ -1,19 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { BaseTestDirective } from './base-test.directive';
 
 @Component({
   selector: 'lib-test',
   template: `
     <p>
-      test works!
+      {{ baseInput }} works!
     </p>
   `,
-  styles: []
+  styles: [],
 })
-export class TestComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class TestComponent extends BaseTestDirective {
 }
